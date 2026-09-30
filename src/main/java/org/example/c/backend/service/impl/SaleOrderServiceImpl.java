@@ -117,6 +117,12 @@ public class SaleOrderServiceImpl extends ServiceImpl<SaleOrderMapper, SaleOrder
         return true;
     }
 
+    @Override
+    public Boolean updateOrderStatus(Long id, Integer status) {
+        SaleOrder saleOrder = this.getById(id);
+        saleOrder.setStatus(status);
+        return this.updateById(saleOrder);
+    }
 }
 
 

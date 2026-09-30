@@ -47,4 +47,11 @@ public class SaleOrderController {
         }
     }
 
+    @PutMapping("/{id}/status")
+    @Operation(summary = "更新订单状态")
+    public Result<?> updateOrderStatus(@PathVariable("id") Long id, @RequestParam("status") Integer status) {
+        return saleOrderService.updateOrderStatus(id, status) ?
+                Result.success("更新成功", id) :
+                Result.fail("更新失败");
+    }
 }

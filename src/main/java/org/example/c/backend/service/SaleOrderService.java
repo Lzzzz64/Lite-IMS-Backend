@@ -7,6 +7,8 @@ import org.example.c.backend.entity.SysUser;
 import org.example.c.backend.vo.OrderVO;
 import org.example.c.backend.vo.PageVO;
 
+import java.util.List;
+
 /**
 * @author 123456
 * @description 针对表【sale_order(销售订单表)】的数据库操作Service
@@ -29,4 +31,12 @@ public interface SaleOrderService extends IService<SaleOrder> {
      * @return
      */
     PageVO<OrderVO> getOrders(Integer page, Integer size, String orderNo);
+
+    /**
+     * 更新订单状态
+     * @param id
+     * @param status
+     * @return
+     */
+    Boolean updateOrderStatus(Long id, Integer status);
 }

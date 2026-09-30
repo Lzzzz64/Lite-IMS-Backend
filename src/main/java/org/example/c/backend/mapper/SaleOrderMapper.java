@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.example.c.backend.vo.OrderVO;
 import org.example.c.backend.vo.ProductVO;
 
+import java.util.List;
+
 /**
 * @author 123456
 * @description 针对表【sale_order(销售订单表)】的数据库操作Mapper
